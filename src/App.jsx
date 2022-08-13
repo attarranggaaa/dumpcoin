@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Navbar />
         <main className="min-h-screen w-full bg-dark2">
-          <div className="container mx-auto px-5 pt-32">
+          <div className="container mx-auto px-5 pt-16 md:pt-32">
             <List />
             <Pagination />
           </div>

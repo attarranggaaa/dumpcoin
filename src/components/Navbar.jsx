@@ -5,7 +5,7 @@ import Search from "./Search";
 function Navbar() {
   return (
     <>
-      <nav className="z-10 backdrop-blur-md fixed w-full h-32">
+      <nav className="z-10 backdrop-blur-md fixed w-full h-20 md:h-32">
         <div className="container mx-auto px-5 flex justify-between items-center h-full">
           <div className="hidden md:flex items-center">
             <img className="w-10 mr-3" src={logo} alt="" />
