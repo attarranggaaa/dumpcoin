@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import { AppContext } from "../context";
 
 function Pagination() {
-  const { pages, next, back, curr, setCurr } = useContext(AppContext);
+  const { pages, next, back, curr, setCurr, coins } = useContext(AppContext);
 
   return (
     <>
-      <div className="flex justify-center items-center text-sm  h-32">
+      <div className={`${coins.length <= 1 && "invisible"} flex justify-center items-center text-sm  h-32`}>
         <button
           className="h-12 w-12  hover:text-secondary/50 rounded-l-lg border border-r-0 border-dark6 text-secondary"
           onClick={() => back()}

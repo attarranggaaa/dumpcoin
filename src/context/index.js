@@ -6,7 +6,7 @@ const AppContext = createContext(null);
 const AppProvider = ({ children }) => {
   const [coins, setCoins] = useState([]);
   const [searchData, setSearchData] = useState([]);
-
+  
   const [input, setInput] = useState("");
   const [selected, setSelected] = useState("");
 
@@ -49,7 +49,7 @@ const AppProvider = ({ children }) => {
         setLoadingSearch(true);
       }
     };
-    getData()
+    getData();
   }, [selected, curr]);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const AppProvider = ({ children }) => {
         setLoadingSearch(true);
       }
     };
-    search()
+    search();
   }, [input]);
 
   const value = {
@@ -89,6 +89,6 @@ const AppProvider = ({ children }) => {
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
-}
+};
 
 export { AppContext, AppProvider };
